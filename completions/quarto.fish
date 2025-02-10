@@ -1,11 +1,10 @@
 # completion for quarto
-complete -c quarto -f
+complete -c quarto
 
 # Main commands
-complete -c quarto -n __fish_use_subcommand -a "render preview create convert inspect tools publish help"
+complete -c quarto -n __fish_use_subcommand -xa "render preview create convert inspect tools publish help"
 
 # render command
-complete -c quarto -n "__fish_seen_subcommand_from render" -a "(__fish_complete_path)"
 complete -c quarto -n "__fish_seen_subcommand_from render" -l to -d "Specify output format"
 complete -c quarto -n "__fish_seen_subcommand_from render" -l execute -d "Execute code"
 complete -c quarto -n "__fish_seen_subcommand_from render" -l no-execute -d "skip code execution"
@@ -16,7 +15,6 @@ complete -c quarto -n "__fish_seen_subcommand_from render" -l profile -d "Active
 complete -c quarto -n "__fish_seen_subcommand_from render" -l quiet -d "Suppress console output"
 
 # preview command
-complete -c quarto -n "__fish_seen_subcommand_from preview" -a "(__fish_complete_path)"
 complete -c quarto -n "__fish_seen_subcommand_from preview" -l port -d "Suggested port to listen on"
 complete -c quarto -n "__fish_seen_subcommand_from preview" -l host -d "Hostname to bind to "
 complete -c quarto -n "__fish_seen_subcommand_from preview" -l no-browser -d "Don't open browser to preview the site"
@@ -28,13 +26,11 @@ complete -c quarto -n "__fish_seen_subcommand_from preview" -l render -d "Render
 complete -c quarto -n "__fish_seen_subcommand_from create" -a "project extension"
 
 # convert command
-complete -c quarto -n "__fish_seen_subcommand_from convert" -a "(__fish_complete_path)"
 complete -c quarto -n "__fish_seen_subcommand_from convert" -l output -d "Write output to PATH"
 complete -c quarto -n "__fish_seen_subcommand_from convert" -l quiet -d "Suppress console output"
 complete -c quarto -n "__fish_seen_subcommand_from convert" -l profile -d "Active project profile(s)"
 
 # inspect command
-complete -c quarto -n "__fish_seen_subcommand_from inspect" -a "(__fish_complete_path)"
 complete -c quarto -n "__fish_seen_subcommand_from inspect" -l quiet -d "Suppress console output"
 
 # publish command
